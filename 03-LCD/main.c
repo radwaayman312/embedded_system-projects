@@ -18,8 +18,9 @@
 void main(void)
 {
 	LCD_voidInit();
-	LCD_voidWriteString("MY NAME IS radwa ");
-	LCD_voidWriteString("1234565 ");
+	LCD_voidWriteString("My name is Radwa Ayman ");
+	LCD_voidWriteString("123465");
+	LCD_voidWriteString("1 a ");
 
 
 while(1)

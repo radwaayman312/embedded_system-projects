@@ -61,26 +61,27 @@ void LCD_voidInit(void)
 void LCD_voidWriteString(u8 *copy_u8tString)
 {
 
-	if (cursor_flag==0)
+	switch (cursor_flag)
 	{
-	for(u8 i=0;copy_u8tString[i]!='\0';i++)
-	{
-		LCD_voidWriteData(copy_u8tString[i]);
-		if(i==16)
-		{
-			LCD_voidWriteCmd(0xc0);
-			cursor_flag=1;
-		}
-	}
-	}
+	case 0:
+		for(u8 i=0;copy_u8tString[i]!='\0';i++)
+			{
+				LCD_voidWriteData(copy_u8tString[i]);
+				if(i==16)
+				{
+					LCD_voidWriteCmd(0xc0);
+					cursor_flag=1;
+				}
+			}break;
+	case 1:
+		for(u8 i=0;copy_u8tString[i]!='\0';i++)
+					{
+						LCD_voidWriteData(copy_u8tString[i]);
+							cursor_flag=1;
+						}
+					break;
 
-	else
-	{
-	LCD_voidWriteCmd(0xc0);
-	cursor_flag=0;
-	for(u8 i=0;copy_u8tString[i]!='\0';i++)
-		{
-			LCD_voidWriteData(copy_u8tString[i]);
-		}
+
+
 	}
 }
