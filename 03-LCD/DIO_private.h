@@ -26,6 +26,6 @@
 #define PINC  *(( u8*) 0X33)
 #define PIND  *(( u8*) 0X30)
 					   
-		
+
 
 #endif

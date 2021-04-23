@@ -12,21 +12,19 @@
 
 
 
-
-
-
 void main(void)
 {
 	LCD_voidInit();
-	LCD_voidWriteString("My name is Radwa Ayman ");
-	LCD_voidWriteString("123465");
-	LCD_voidWriteString("1 a ");
 
 
-while(1)
-{
 
-}
+	LCD_voidWriteString("my name:");
+	LCD_voidDisplayInAR();
 
 
+    while(1){
+      /*  LCD_voidShiftString("WELLCOM IMT");
+    	LCD_voidSetPostion(1,0);
+*/
+    }
 }
